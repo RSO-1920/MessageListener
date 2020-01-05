@@ -4,7 +4,7 @@ RUN mkdir /app
 
 WORKDIR /app
 
-ADD api/target/api-1.0-SNAPSHOT.jar.jar /app
+ADD api/target/api-1.0-SNAPSHOT.jar /app
 
 EXPOSE 8091
 
