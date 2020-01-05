@@ -25,8 +25,8 @@ public class ListenerApi {
 
     private static final Logger LOG = LogManager.getLogger(ListenerApi.class.getName());
 
-    @Inject
-    MessageListenerBean messageListenerBean;
+    //@Inject
+    //MessageListenerBean messageListenerBean;
 
     @GET
     @Timed(name = "incomingMsg_time_get")
