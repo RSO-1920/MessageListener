@@ -9,13 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>services</artifactId>
-    <dependencies>
-        <dependency>
-            <groupId>si.fri.rso</groupId>
-            <artifactId>lib</artifactId>
-        </dependency>
-    </dependencies>
+    <artifactId>lib</artifactId>
 
 
 </project>
