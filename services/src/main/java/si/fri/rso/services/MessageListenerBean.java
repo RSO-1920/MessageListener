@@ -5,10 +5,14 @@ import org.eclipse.paho.client.mqttv3.*;
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.context.Initialized;
 import javax.enterprise.event.Observes;
+import javax.inject.Inject;
 
 @ApplicationScoped
 public class MessageListenerBean implements MqttCallback {
     MqttClient client;
+
+    @Inject
+    WebsocketSession websocketSession;
 
     public void init(@Observes @Initialized(ApplicationScoped.class) Object o){
         System.out.println("NEW CLIENT");
@@ -29,6 +33,7 @@ public class MessageListenerBean implements MqttCallback {
     @Override
     public void messageArrived(String s, MqttMessage mqttMessage) throws Exception {
         System.out.println("MESSAGE RECEIVED: " + mqttMessage.toString());
+        websocketSession.onServerMessage(mqttMessage.toString());
     }
 
     @Override

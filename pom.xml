@@ -142,6 +142,10 @@
             <artifactId>kumuluzee-cors</artifactId>
             <version>${kumuluzee-cors.varsion}</version>
         </dependency>
+        <dependency>
+            <groupId>com.kumuluz.ee</groupId>
+            <artifactId>kumuluzee-websocket-jetty</artifactId>
+        </dependency>
     </dependencies>
 
 </project>
